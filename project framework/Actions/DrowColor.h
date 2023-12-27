@@ -11,6 +11,7 @@ public:
 	// Constructor For Select Action Class 
 	DrowColor(ApplicationManager* pApp);
 	//Excute Select Action
+	//test  githup
 	virtual void Execute();
 };
 
