@@ -6,6 +6,7 @@
 #include "Actions\DrowColor.h"
 #include "Actions\FillColor.h"
 #include "Actions\BKColor.h"
+#include "Actions\ExitAction.h"
 
 //Constructor
 ApplicationManager::ApplicationManager()
@@ -79,7 +80,7 @@ Action* ApplicationManager::CreateAction(ActionType ActType)
 
 		case EXIT:
 			///create ExitAction here
-			
+			newAct = new ExitAction(this);
 			break;
 		
 		case STATUS:	//a click on the status bar ==> no action

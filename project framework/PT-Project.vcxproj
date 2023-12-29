@@ -135,6 +135,7 @@
     <ClCompile Include="Actions\ActionSelect.cpp" />
     <ClCompile Include="Actions\BKColor.cpp" />
     <ClCompile Include="Actions\DrowColor.cpp" />
+    <ClCompile Include="Actions\ExitAction.cpp" />
     <ClCompile Include="Actions\FillColor.cpp" />
     <ClCompile Include="CMUgraphicsLib\auxil.cpp" />
     <ClCompile Include="CMUgraphicsLib\CMUgraphics.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="Actions\ActionSelect.h" />
     <ClInclude Include="Actions\BKColor.h" />
     <ClInclude Include="Actions\DrowColor.h" />
+    <ClInclude Include="Actions\ExitAction.h" />
     <ClInclude Include="Actions\FillColor.h" />
     <ClInclude Include="CMUgraphicsLib\auxil.h" />
     <ClInclude Include="CMUgraphicsLib\CMUgraphics.h" />
