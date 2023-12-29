@@ -24,11 +24,11 @@ void ActionAddHexagon::Execute()
 		//Read 1st point and store in point P1
 	pGUI->PrintMessage("New Hexagon: Click at top left point");
 	pGUI->GetPointClicked(P1.x, P1.y);
-	//P1 = pGUI->ValidatePoint(P1);
+	P1 = pGUI->ValidatePoint(P1);
 	//Read 2nd point and store in point P2
 	pGUI->PrintMessage("New Hexagon: Click at bottom right point");
 	pGUI->GetPointClicked(P2.x, P2.y);
-	//P2 = pGUI->ValidatePoint(P2);
+	P2 = pGUI->ValidatePoint(P2);
 	//Clear status bar
 	pGUI->ClearStatusBar();
 

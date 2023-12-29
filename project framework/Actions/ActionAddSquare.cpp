@@ -32,10 +32,12 @@ void ActionAddSquare::Execute()
 	pGUI->PrintMessage("New Square: Click at first point");	
 	//Read 1st point and store in point P1
 	pGUI->GetPointClicked(P1.x, P1.y);
+	P1 = pGUI->ValidatePoint(P1);
 
 	pGUI->PrintMessage("New Square: Click at second point");
 	//Read 2nd point and store in point P2
 	pGUI->GetPointClicked(P2.x, P2.y);
+	P2 = pGUI->ValidatePoint(P2);
 
 	pGUI->ClearStatusBar();
 

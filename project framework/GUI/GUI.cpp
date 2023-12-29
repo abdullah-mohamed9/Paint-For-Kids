@@ -289,7 +289,20 @@ void GUI::DrawHexagon(Point P1, int length, int height, GfxInfo HexGfxInfo, bool
 
 
 }
-
+Point GUI::ValidatePoint(Point P1) const {
+	if (P1.y < UI.ToolBarHeight || P1.y > UI.height - UI.StatusBarHeight)
+	{
+		bool flag = false;
+		PrintMessage("Can't choose here!; please choose a point in the drawing area");
+		while (!flag)
+		{
+			GetPointClicked(P1.x, P1.y);
+			if (!(P1.y < UI.StatusBarHeight || P1.y > UI.height - UI.StatusBarHeight))
+				flag = 1;
+		}
+	}
+	return P1;
+}
 //////////////////////////////////////////////////////////////////////////////////////////
 GUI::~GUI()
 {

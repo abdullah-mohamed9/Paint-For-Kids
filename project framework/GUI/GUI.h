@@ -35,6 +35,8 @@ public:
 	void DrawSquare(Point P1, int length, GfxInfo RectGfxInfo, bool selected=false) const;  //Draw a Square
 	void DrawElipse(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) const;					//Draw an Elipse
 	void DrawHexagon(Point P1, int length, int height, GfxInfo HexGfxInfo, bool selected) const;   //Draw an Heagon
+	Point ValidatePoint(Point P1) const;
+
 	
 	///TODO: Make similar functions for drawing all other figures.
 	
