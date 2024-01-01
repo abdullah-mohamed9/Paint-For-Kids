@@ -52,6 +52,11 @@ public:
 	void pushselectedfigure(CFigure* pFig);
 	// Pop selected figures from selectedfigure Vector
 	void popselectedfigure(CFigure* pFig);
+
+
+	void changeDrawColor(color);
+	void changeFillColor(color);
+	
 };
 
 #endif

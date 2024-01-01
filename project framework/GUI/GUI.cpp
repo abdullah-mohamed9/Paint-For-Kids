@@ -283,11 +283,9 @@ void GUI::DrawHexagon(Point P1, int length, int height, GfxInfo HexGfxInfo, bool
 		style = FRAME;
 
 	int XVert[] = { P1.x, P1.x + length, P1.x + 1.5 * length, P1.x + length, P1.x, P1.x - 0.5 * length };
-	int YVert[] = { P1.y, P1.y, P1.y + 0.5 * height, P1.y + height, P1.y + height, P1.y + 0.5 * height };
+	int YVert[] = { P1.y, P1.y, P1.y + 0.866025404*length, P1.y + 1.73205081 * length, P1.y + 1.73205081 * length, P1.y + 0.866025404 * length };
 
 	pWind->DrawPolygon(XVert, YVert, 6, style);
-
-
 }
 Point GUI::ValidatePoint(Point P1) const {
 	if (P1.y < UI.ToolBarHeight || P1.y > UI.height - UI.StatusBarHeight)

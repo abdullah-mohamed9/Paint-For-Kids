@@ -180,3 +180,16 @@ void ApplicationManager::popselectedfigure(CFigure* pfig)
 		
 	}
 }
+
+void ApplicationManager::changeDrawColor(color c) {
+		for (int i = 0; i < selectedfigure.size(); i++) {
+			selectedfigure[i]->ChngDrawClr(c);
+		}
+}
+
+void ApplicationManager::changeFillColor(color c) {
+
+	for (int i = 0; i < selectedfigure.size(); i++) {
+		selectedfigure[i]->ChngFillClr(c);
+	}
+}

@@ -14,6 +14,7 @@ void DrowColor::Execute() {
     if (P.y < UI.ToolBarHeight && P.x / UI.MenuItemWidth == 6) {
         UI.DrawColor = g->pWind->GetColor(P.x, P.y);
         g->ClearStatusBar();
+        pManager->changeDrawColor(g->pWind->GetColor(P.x, P.y));
     }
     else
     {
