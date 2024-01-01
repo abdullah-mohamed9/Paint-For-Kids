@@ -15,6 +15,7 @@ GUI::GUI()
 	UI.StatusBarHeight = 50;
 	UI.ToolBarHeight = 50;
 	UI.MenuItemWidth = 60;
+	UI.isFilled = false;
 	
 	UI.DrawColor = BLUE;	//Drawing color
 	UI.FillColor = GREEN;	//Filling color
@@ -205,6 +206,11 @@ void GUI::PrintMessage(string msg) const	//Prints a message on status bar
 }
 //////////////////////////////////////////////////////////////////////////////////////////
 
+void GUI::setCrntFillColor(color c) {
+	UI.FillColor = c;
+	UI.isFilled = true;
+	pWind->SetBrush(UI.FillColor);
+}
 color GUI::getCrntDrawColor() const	//get current drwawing color
 {	return UI.DrawColor;	}
 //////////////////////////////////////////////////////////////////////////////////////////

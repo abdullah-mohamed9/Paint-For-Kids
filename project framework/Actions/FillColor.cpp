@@ -13,7 +13,9 @@ void FillColor::Execute() {
     g->GetPointClicked(P.x, P.y);
     if (P.y < UI.ToolBarHeight && P.x / UI.MenuItemWidth == 6) {
         UI.FillColor = g->pWind->GetColor(P.x, P.y);
+        g->setCrntFillColor(g->pWind->GetColor(P.x, P.y));
         g->ClearStatusBar();
+        pManager->changeFillColor(g->pWind->GetColor(P.x, P.y));
     }
     else
     {
